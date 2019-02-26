@@ -1,0 +1,89 @@
+2019-02-24 16:10:00,441 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:44]
+2019-02-24 16:16:00,635 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 09:34:49,400 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 09:34:58,129 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 09:35:28,782 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:03:46,209 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:19:05,700 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:28:48,477 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:31:19,716 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:32:52,096 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:33:26,473 INFO: Microblog startup [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/app/__init__.py:45]
+2019-02-26 10:37:22,109 ERROR: Exception on /user/kennyb [GET] [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/routes.py", line 79, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/base.html", line 35, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/user.html", line 15, in block "content"
+    <p>{{ user.followers.count() }} followers, {{ users.followed.count() }} following</p>
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'users' is undefined
+2019-02-26 10:38:08,053 ERROR: Exception on /user/kennyb [GET] [in /Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/routes.py", line 79, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/base.html", line 35, in top-level template code
+    {% block content %}{% endblock %}
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/app/templates/user.html", line 15, in block "content"
+    <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following</p>
+  File "/Users/kennybushman/web-dev/miguel-grinberg/microblog/.env/lib/python3.7/site-packages/jinja2/environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'users' is undefined
